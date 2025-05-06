@@ -1,0 +1,361 @@
+/* Root */
+:root {
+    --color-p: #FFFBFE;
+    --color-s: #B02E0C;
+    --color-t: #0B0A07;
+    --color-q: #F0EC57;
+    --color-l: #242423;
+}
+
+.color-s {
+    color: var(--color-s);
+}
+
+.color-q {
+    color: var(--color-q);
+}
+
+/* Global Settings */
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('/public/fonts/SpaceGrotesk-Regular.ttf');
+}
+
+* {
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    font-family: 'SpaceGrotesk';
+    background-color: var(--color-l);
+    color: var(--color-p);
+    font-size: 18px;
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+
+
+/* BUTTONS */
+
+.buttonCust{
+    color: var(--color-t);
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: var(--color-l) 2px solid;
+    transition: 0.8s;
+    background: linear-gradient(90deg, var(--color-q) 50%, var(--color-s)50%);
+    box-shadow: 6px 8px var(--color-s);
+    background-size: 200%;
+    background-position: 0px 0px;
+
+}
+
+.buttonCustHome {
+    padding: 20px 60px;
+    
+
+}
+
+.buttonCust:hover{
+    background-position: -100% 0px;
+    box-shadow: 3px 8px var(--color-l);
+}
+
+/* Navbar */
+
+.nav-item {
+    padding: 5px;
+    margin-right: 5px;
+}
+.nav-link {    
+    color:var(--color-p) !important;
+}
+
+.navbarCustom {
+    background-color: var(--color-t);
+    border-bottom: var(--color-p) 2px solid;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav-link:hover {
+text-decoration: underline;
+color: var(--color-s) !important;
+text-underline-offset: 5px;
+animation: zoom 0.2s;
+animation-fill-mode: forwards;
+}
+@media only screen and (max-width: 600px) {
+    .nav-link:hover {
+        animation: none;
+    }
+}
+
+
+/* NAVBAR-CATEGORY */
+
+.custom-dropdown {
+    background-color: var(--color-s);
+    box-shadow: 5px 5px var(--color-q);
+    transition: all 0.25s;
+}
+
+.custom-dropdown a {
+    color: var(--color-p);
+}
+
+.custom-dropdown a:hover {
+    background-color: var(--color-s);
+    color: var(--color-p);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.badge{
+    margin-right: 10px;
+    background-color: red;
+    border: var(--color-q) 3px solid;
+    color: var(--color-p);
+}
+
+.custom-dropdownUser{
+    background-color: var(--color-s);
+    box-shadow: 5px 5px var(--color-q);
+    transition: all 0.25s;
+
+}
+
+.custom-dropdownUser a{
+    color: var(--color-p);
+}
+
+.custom-dropdownUser a:hover {
+    background-color: var(--color-s);
+    color: var(--color-p);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.dropdown-menu a:focus, .dropdown-menu a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* FORM */
+
+.form-control:focus {
+    border-color: var(--color-q);
+    box-shadow: 0 0 0 0.25rem #f0eb5769;
+}
+
+.form-select:focus {
+    border-color: var(--color-q);
+    box-shadow: 0 0 0 0.25rem #f0eb5769;
+}
+
+
+/* CARD */
+
+.cardBorder{
+    margin: 0 auto;
+    background-color: var(--color-t);
+    color: var(--color-p);
+    max-width: 350px;
+    margin-bottom: 100px;
+    
+}
+
+
+.cardBorder:hover{
+    box-shadow: 8px 5px var(--color-p);
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.card-body > a {
+    color: var(--color-q);
+
+}
+
+
+.categoryBdg{
+    background-color: var(--color-q);
+    color: var(--color-t) !important;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+.heightImgCard{
+    height: 30vh;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* SEARCH */
+
+
+.form-custom{
+    background-color: var(--color-l) !important;
+    border: none !important;
+    border-bottom: var(--color-s) 3px solid !important;
+    padding: 10px !important;
+    font-size: 24px !important;
+    outline: none !important;
+    
+}
+
+.form-custom input:focus {
+    border: none;
+    outline: none;
+}
+
+.form-custom input::placeholder {
+    color: var(--color-p);
+
+}
+
+@media screen and (max-width: 600px) {
+    .form-custom{
+        font-size: 15px !important;
+        padding: 0px !important;
+        margin-left: 15px !important;
+        
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .form-custom{
+        font-size: 20px !important;
+        max-width: 300px !important;
+        padding: 10px 30px !important;
+        
+    }
+}
+
+.boxShadows{
+    border: var(--color-t) 4px solid;
+    padding: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 8px 11px var(--color-t);
+}
+
+/* SHOW VIEW */
+
+.borderCarousel{
+    border-radius: 10px;
+    /* border: var(--color-p) 4px solid;
+    padding: 10px; */
+    box-shadow: 8px 11px var(--color-p);
+}
+
+.customPrice {
+    color: var(--color-q);
+    text-decoration-line: underline;
+}
+
+.heightImg{
+    height: 60vh;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* PAGINATION */
+
+.pagination{
+   
+    border-radius: 10px;
+    border: var(--color-t) 2px solid;
+    box-shadow: 5px 5px var(--color-s);
+
+}
+
+/* Cambia il colore di sfondo dei link */
+.page-link {
+    background-color: var(--color-q); 
+    color: var(--color-t);
+    border: 1px solid var(--color-t);
+    
+}
+  
+  /* Hover effetto */
+.page-link:hover {
+    background-color: var(--color-s); 
+    color: var(--color-t);
+    border: 1px solid var(--color-t);
+}
+  
+  /* Pagina attiva */
+.pagination .page-item.active .page-link {
+    background-color: var(--color-s);
+    color: var(--color-t);
+    border: none;
+    
+}
+  
+  /* Elementi disabilitati */
+.page-item.disabled .page-link {
+    background-color: var(--color-q);
+    color: var(--color-t);
+    border-color: var(--color-t);
+}
+
+.page-item .page-link:focus{
+    box-shadow: none !important;
+}
+
+/* FOTO PREVIEW */
+  
+.img-preview{
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.borderPreview{
+    border: var(--color-q) 4px solid;
+    padding: 40px 40px;
+    border-radius: 10px;
+    
+}
+
+
+/* FOOTER */
+
+.footerCustom {
+    background-color: var(--color-t);
+    color: var(--color-p);
+}
+
+.contactIcons:hover{
+    color: var(--color-s);
+    font-size: 22px;
+    transition: all 0.8s;
+}
+
+
+/* ANIMAZIONI */
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
